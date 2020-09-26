@@ -1,4 +1,4 @@
-##include <iostream>
+#include <iostream>
 
 int main()
 {
@@ -6,10 +6,10 @@ int main()
   bool  b;
   bool  c;
 
-  std::cin >> a, b;
+  std::cin >> a >> b;
 
-  c = !(a && b) && (a || b);
+  c = (!(a && b)) && (a || b);
 
-  std::cout << c; 
+  std::cout << c;
   return 0;
 }
