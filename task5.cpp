@@ -18,8 +18,8 @@ int main()
   }
   d = b * b - 4 * a * c;
   if (d >= 0)
-    std::cout << "Roots: " << ((-b + sqrt(d)) / (2 * a)) << ", "
-     ((-b - sqrt(d)) / (2 * a));
+    std::cout << "Roots: " << ((-b + std::sqrt(d)) / (2 * a)) << ", "
+     ((-b - std::sqrt(d)) / (2 * a));
   else
     std::cout << "No Real roots! Think about it, man!!!";
   return 0;
