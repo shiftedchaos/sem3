@@ -37,13 +37,15 @@ int main()
   {
     for (int j = 0; j < m; j++)
     {
-      if ((arr_1[i] == arr_2[j]) && (arr_1[i] + step == arr_1[i + 1]) && (arr_2[j] + step == arr_2[j + 1]))
+      if ((arr_1[i] == arr_2[j]) && (arr_1[i] + step == arr_1[i + 1])
+      && (arr_2[j] + step == arr_2[j + 1]))
       {
         k = j;
         break;
       }
     }
-    if ((arr_1[i] == arr_2[k]) && (arr_1[i] + step == arr_1[i + 1]) && (arr_2[k] + step == arr_2[k + 1]))
+    if ((arr_1[i] == arr_2[k]) && (arr_1[i] + step == arr_1[i + 1])
+     && (arr_2[k] + step == arr_2[k + 1]))
     {
       g = i;
       break;
