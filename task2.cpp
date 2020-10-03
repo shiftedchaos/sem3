@@ -16,19 +16,19 @@ int main ()
   }
   std::cout << std::endl << "Insert key: ";
 
-  std::cin >> key; // считываем ключ
+  std::cin >> key;
 
   bool flag = false;
-  int l = 0; // левая граница
-  int r = (n - 1); // правая граница
+  int l = 0;
+  int r = (n - 1);
   int mid;
 
   while ((l <= r) && (flag != true))
   {
-    mid = (l + r) / 2; // считываем срединный индекс отрезка [l,r]
+    mid = (l + r) / 2;
 
-    if (array[mid] == key) flag = true; //проверяем ключ со серединным элементом
-    if (array[mid] > key) r = mid - 1; // проверяем, какую часть нужно отбросить
+    if (array[mid] == key) flag = true; 
+    if (array[mid] > key) r = mid - 1;
     else l = mid + 1;
   }
 
