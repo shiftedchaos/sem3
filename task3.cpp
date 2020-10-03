@@ -52,8 +52,8 @@ int main()
     }
   }
   //std::cout << g << ' ' << k;
-  tarr_1 = arr_1[g];
-  tarr_2 = arr_2[k];
+  //tarr_1 = arr_1[g];
+  //tarr_2 = arr_2[k];
   //std::cout << tarr_1 << ' ' << tarr_2;
   for (size_t i = g; i < n; i++) {
     if (arr_1[i] + step == arr_1[i + 1])
