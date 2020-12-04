@@ -15,8 +15,9 @@ int main()
         std::cin >> k;
         a.push_back(k);
     }
-    std::cout << "input 1 - ascending order" << endl << "input 2 -
-     descending order " << endl << "input 3 - non-descending " << endl << "input 4 - non-ascending" ;
+    std::cout << "input 1 - ascending order" << std::endl << "input 2 -
+     descending order" << std::endl << "input 3 - non-descending"
+      << std::endl << "input 4 - non-ascending";
     std::cin >> lam;
 
     std::sort(a.begin(), a.end(), [lam](auto &x,auto&y){
@@ -26,7 +27,7 @@ int main()
             return (x < y);
         else if (lam == 3)
           return (x <= y);
-        else if
+        else 
           return (x >= y);
 
 
@@ -36,5 +37,5 @@ int main()
     {
         std::cout << a[i] << " ";
     }
-
+    return 0;
 }
