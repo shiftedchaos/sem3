@@ -1,5 +1,5 @@
 #include <iostream>
-#include<vector>
+#include <vector>
 #include <algorithm>
 
 int main()
@@ -15,23 +15,20 @@ int main()
         std::cin >> k;
         a.push_back(k);
     }
-    std::cout << "input 1 - ascending order" << std::endl << "input 2 -
-     descending order" << std::endl << "input 3 - non-descending"
-      << std::endl << "input 4 - non-ascending";
+    std::cout << "1 - ascending, 2 - descending, 3 - non-descending, 4 - non-ascending";
     std::cin >> lam;
 
     std::sort(a.begin(), a.end(), [lam](auto &x,auto&y){
-        if (lam == 1)
+        if (lam == 2)
             return(x > y);
-        else if (lam == 2)
+        else if (lam == 1)
             return (x < y);
         else if (lam == 3)
           return (x <= y);
-        else 
+        else
           return (x >= y);
-
-
         });
+
     std::cout << "Sorted array ";
     for (size_t i = 0; i < N; ++i)
     {
