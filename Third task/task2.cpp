@@ -77,7 +77,6 @@ int main()
   {
     std::cin >> arr[i];
   }
-  printArray(arr, n);
   merge_sort(arr, 0, n - 1);
   std::cout << "Sorted array" << std::endl;
   printArray(arr, n);
