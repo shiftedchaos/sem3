@@ -1,6 +1,7 @@
 #include <iostream>
 
-class Cond {
+class Cond
+{
 private:
   float c, u;
   float energy;
