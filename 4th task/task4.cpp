@@ -10,11 +10,12 @@ private:
     string surname_ = {};
 public:
     double avg_ = 0;
-    Student (string name, string surname, double avg = 0):
+    Student (string name, string surname, double avg = 0)
+    {
             name_ (name),
             surname_ (surname),
             avg_ (avg)
-    {}
+    }
 };
 
 class Group {

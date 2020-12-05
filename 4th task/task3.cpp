@@ -1,25 +1,26 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 
 class Student
 {
 private:
   std::string name = {};
-  std::string surname;
+  std::string surname = {};
 public:
-  float av_mark;
-  Stident (std::name0, std::surname0, av_mark0)
+  float av_mark = 0;
+  Stident (std::name0, std::surname0, av_mark0 = 0)
   {
-    name = name0;
-    surname = surname0;
-    av_mark = av_mark0;
+    name (name0);
+    surname (surname0);
+    av_mark (av_mark0);
   }
 };
 
 class Group
 {
 private:
-  std::vector<Student> vStudent;
+  std::vector<Student> vStudent = {};
 public:
   Group () = default;
   void add (const Student & student)
