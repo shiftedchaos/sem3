@@ -17,13 +17,14 @@ public:
 
   float calc_en()
   {
-    return (c * u * u)/2;
+    std::cout << (c * u * u)/2;
   }
+
 };
 
 int main()
 {
-  Cond a(5, 11);
+  Cond a(6, 1);
   a.Print();
   a.calc_en();
   return 0;
