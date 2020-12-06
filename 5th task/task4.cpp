@@ -15,15 +15,9 @@ int main()
     {
       fin >> arr[i];
     }
-    for (size_t i = 0; i < 4; i++)
-    {
-      std::cout << arr[i] << ' ';
-    }
 
     r = arr[0] + arr[2];
     i = arr[1] + arr[3];
-    cout << endl << r << endl;
-    cout << i << endl;
 
   ofstream fout;
 
