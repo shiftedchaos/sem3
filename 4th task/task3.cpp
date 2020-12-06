@@ -1,42 +1,50 @@
 #include <iostream>
 #include <string>
-#include <cmath>
+#include <vector>
 
 class Student
 {
-private:
-  std::string name = {};
-  std::string surname = {};
 public:
-  float av_mark = 0;
-  Stident (std::name0, std::surname0, av_mark0 = 0)
+  std::string name;
+  std::string surname;
+  float av_mark;
+  Stident (std::string name0, std::string surname0, float av_mark0)
   {
-    name (name0);
-    surname (surname0);
-    av_mark (av_mark0);
+    name = name0;
+    surname = surname0;
+    av_mark = av_mark0;
+  }
+  std::string get_name()
+  {
+    return  name;
+  }
+	std::string get_surname()
+  {
+    return surname;
+  }
+	double get_score()
+  {
+    return av_mark;
   }
 };
 
 class Group
 {
-private:
-  std::vector<Student> vStudent = {};
 public:
-  Group () = default;
-  void add (const Student & student)
+  std::vector<std::string> vStudent = {};
+
+  Group () {}
+  void add (Student& student)
   {
-    vStudent.push_back (student);
+    vStudent.push_back(student.get_name());
   }
-  double average ()
-  {
-    double counter = 0;
-    for (auto i : vStudent)
+  void get_add()
+	{
+		for (int i = 0; i < 2; i++)
     {
-      counter += i.av_mark;
-      counter /= vStudent.size();
-    }
-    return counter;
-  }
+			std::cout << vStudent[i] << std::endl;
+		}
+	}
   ~Group ()
   {
       vStudent.clear();
@@ -45,9 +53,18 @@ public:
 
 int main()
 {
-  Group group {};
-  Student student ("Name", "Surname", 10);
-  group.add (student);
-  std::cout << group.average() << std::endl;
+  Student first{ "canz", "bazgir", 27 };
+  Student second{ "ben", "chatwin", 25 };
+  Group students{};
+  std::cout << "Name:" << first.get_name() << std::endl;
+	std::cout << "Surname: " << first.get_surname() << std::endl;
+	std::cout << "Average mark: " << first.get_score() << std::endl;
+  std::cout << "Name:" << second.get_name() << std::endl;
+	std::cout << "Surname: " << second.get_surname() << std::endl;
+	std::cout << "Average mark: " << second.get_score() << std::endl;
+  students.add(first);
+  students.add(second);
+  std::cout << "Group list:";
+	students.get_add();
   return 0;
 }
