@@ -34,11 +34,11 @@ Complex operator * (const Complex &a, const Complex &b)
 int main ()
 {
   double r1, i1, r2, i2, prod;
-  std::cout << "Inpur real part of your first complex number and then " <<
+  std::cout << "Input real part of your first complex number and then " <<
    "Imaginary part of your first complex number" << std::endl;
   std::cin >> r1;
   std::cin >> i1;
-  std::cout << "Inpur real part of your second complex number and then " <<
+  std::cout << "Input real part of your second complex number and then " <<
    "Imaginary part of your second complex number" << std::endl;
   std::cin >> r2;
   std::cin >> i2;
