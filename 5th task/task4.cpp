@@ -1,11 +1,10 @@
 #include <fstream>
 #include <iostream>
-#include <cstdlib>
 using namespace std;
 
 int main()
 {
-  string path = "C:\\Users\\shiftedchaos\\Desktop\\input.txt.txt";
+  string path = "input.txt";
   ifstream fin;
   fin.open(path);
 
@@ -31,3 +30,11 @@ int main()
 
   return 0;
 }
+
+/*
+example of input.txt Input
+
+1.3 3.2
+4.1 9.6
+
+*/
