@@ -106,8 +106,8 @@ public:
   virtual  ostream& print(ostream& out)
   {
     out << "Polygon, ";
-    out << "area " << area((n),  (points));
-    out << "perimeter " << perimeter((n), (points));
+    out << "area " << area((n),  (points)) << ", ";
+    out << "perimeter " << perimeter((n), (points)) << ", ";
 
   }
       //перегрузка оператора вывода
