@@ -22,8 +22,6 @@ public:
     delete[] arr;
   }
 
-  void setValue(int index, int value) { arr[index] = value; }
-      int getValue(int index) { return arr[index]; }
   void reallocate(int newlen)
   {
     delete[] arr; //удаление уже существующего массива
@@ -42,22 +40,7 @@ public:
     {
       newarr[i] = arr[i];
     }
-    delete[] newarr;
     *arr = *newarr; // удаляем старый массив и присваиваем указателю на старый массив указатель на новый массив
-    //delete[] newarr;
+    delete[] newarr;
   }
 };
-
-int main() {
-    ArrayInt arr(10);
-    for (int i = 0; i < 10; i++)
-        arr.setValue(i, i + 1);
-    for (int i = 0; i < 10; i++)
-        cout << arr.getValue(i) << ' ';
-    cout << endl;
-    arr.insertBefore(7, 3);
-    cout << "The value of element number 7 is " << arr.getValue(7) << endl;
-    for (int i = 0; i < 11; i++)
-        cout << arr.getValue(i) << ' ';
-    return 0;
-}
