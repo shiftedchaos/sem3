@@ -2,6 +2,8 @@
 #include <cstdlib>
 #include <ctime>
 
+//Using function from seminar getRandomNumber()
+
 double getRandomNumber(double minimum, double maximum)
 {
   double randZeroOne = rand()/static_cast<double>(RAND_MAX); //getting random number from 0 to 1
@@ -29,7 +31,6 @@ int main()
     };
   };
   pi = (4 * p_in) / p_ttl;
-  std::cout << p_ttl << p_in;
   std::cout << "Calculated by Monte-Carlo method number pi - " << pi << std::endl;
   return 0;
 }
