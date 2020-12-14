@@ -2,7 +2,7 @@
 #include <iomanip>
 
 template <typename T>
-class  Queue
+class Queue
 {
 private:
   T* queue;
